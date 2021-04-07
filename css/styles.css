@@ -66,7 +66,6 @@ img {
 }
 
 .link {
-  /* position: relative; */
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -622,13 +621,17 @@ img {
   margin-bottom: 30px;
 }
 
+.portfolio-ection-card {
+  text-decoration: none;
+}
+
 .card {
   width: 370px;
-  cursor: pointer;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card:hover {
+.portfolio-ection-card:hover .card,
+.portfolio-ection-card:focus .card {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -663,7 +666,8 @@ img {
   color: var(--primary-white-colour);
 }
 
-.card:hover .portfolio-card-block {
+.portfolio-ection-card:hover .portfolio-card-block,
+.portfolio-ection-card:focus .portfolio-card-block {
   transform: translateY(0);
   opacity: 1;
 }
@@ -687,6 +691,8 @@ img {
 
 .portfolio-text {
   margin: 0;
+
+  color: var(--primary-text-colour);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -729,6 +735,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   top: 8px;
   right: 8px;
@@ -738,4 +745,14 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--primary-white-colour);
+}
+
+.modal-icon {
+  fill: currentColor;
+  прtransition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:focus .modal-icon,
+.modal-button:hover .modal-icon {
+  color: var(--accent-text-colour);
 }
